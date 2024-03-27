@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -13,8 +15,35 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Roboto', sans-serif;
+    --color-purple: #5722CD;
+    --color-blue: #4845E4;
+    --color-pink: #ED4385;
+    --color-text: #0C0C0C;              /*zwart - standaard tekstkleur*/
+    --color-floating-words: #F2F0FF;    /*lichtpaars - voor "hello" en "services in de achtergrond")*/
+    --color-background: #F3F6F9;        /*lichtgrijs - voor achtergrond van de projecten*/
+    --color-service-tile: #7A7A7A;      /*grijs - voor service-tegel tekst*/
+}
+
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--color-text);
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--color-text);
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
