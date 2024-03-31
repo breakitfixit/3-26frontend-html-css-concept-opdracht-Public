@@ -27,10 +27,10 @@
     --color-purple: #5722CD;
     --color-blue: #4845E4;
     --color-pink: #ED4385;
-    --color-text: #0C0C0C;              /*zwart - standaard tekstkleur*/
-    --color-floating-words: #F2F0FF;    /*lichtpaars - voor "hello" en "services in de achtergrond")*/
-    --color-background: #F3F6F9;        /*lichtgrijs - voor achtergrond van de projecten*/
-    --color-service-tile: #7A7A7A;      /*grijs - voor service-tegel tekst*/
+    --color-text: #0C0C0C; /*zwart - standaard tekstkleur*/
+    --color-floating-words: #F2F0FF; /*lichtpaars - voor "hello" en "services in de achtergrond")*/
+    --color-background: #F3F6F9; /*lichtgrijs - voor achtergrond van de projecten*/
+    --color-service-tile: #7A7A7A; /*grijs - voor service-tegel tekst*/
 }
 
 
@@ -46,14 +46,67 @@ body {
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+
+
 
 /* --------------- 3.1 Reusables ----------------------- */
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px dashed orangered;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto; /* Centreert de sectie horizontaal */
+    width: calc(100% - 40px); /* Past de breedte aan om rekening te houden met de padding */
+    border: 2px dashed orangered;
+}
+
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    border: 2px greenyellow dashed;
+}
+
+.header-content__navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    /*flex-basis: 500px;*/
+    list-style-type: none;
+    padding: 0;
+}
+
+.header-content__navigation {
+    margin: 20px;
+}
+
+.header-content__navigation a {
+    text-decoration: none;
+}
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
