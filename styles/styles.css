@@ -28,7 +28,7 @@
     --color-blue: #4845E4;
     --color-pink: #ED4385;
     --color-text: #0C0C0C; /*zwart - standaard tekstkleur*/
-    --color-floating-words: #F2F0FF; /*lichtpaars - voor "hello" en "services in de achtergrond")*/
+    --color-background-words: #F2F0FF; /*lichtpaars - voor "hello" en "services in de achtergrond")*/
     --color-background: #F3F6F9; /*lichtgrijs - voor achtergrond van de projecten*/
     --color-service-tile: #7A7A7A; /*grijs - voor service-tegel tekst*/
 }
@@ -37,7 +37,7 @@
 /* ------------------------------- 2. Typography ----------------------------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    color: var(--color-text);
+    /*color: var(--color-text);*/
 }
 
 body {
@@ -60,15 +60,36 @@ body {
 
 
 
+
 /* --------------- 3.1 Reusables ----------------------- */
 
-section {
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-basis: 200px;
+}
+
+.portfolio-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
-    border: 2px dashed orangered;
+    align-items: flex-start;
+    text-align: left;
+    padding: 50px;
+    width: 400px;
+    flex:3;
 }
+
+.portfolio-image {
+    display: flex;
+    align-items: center;
+    border: red dotted 2px;
+    padding: 100px;
+    /*box-shadow: 0px 4px 8px grey;*/
+    flex: 5;
+}
+
 
 section {
     display: flex;
@@ -82,11 +103,44 @@ section {
 
 /* --------------- 3.2 Other --------------------------- */
 
+.variety {
+    flex-direction: row-reverse;
+
+}
+
+
 /* ------------------------------- 4. Areas ---------------------------------------- */
+
+
+
+.company-contact {
+    padding: 50px;
+
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px dashed blue;
+}
+
+
+
+
+
+
 
 /* --------------- 4.1 Header ------------------------- */
 header {
     border: 2px greenyellow dashed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 300px;
+    background-color: #4845E4;
+    color: white;
 }
 
 .header-content__navigation ul {
@@ -96,6 +150,7 @@ header {
     align-items: center;
     /*flex-basis: 500px;*/
     list-style-type: none;
+
     padding: 0;
 }
 
@@ -105,9 +160,33 @@ header {
 
 .header-content__navigation a {
     text-decoration: none;
+    color: white;
 }
 
 
 /* --------------- 4.2 Introduction ------------------- */
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #5722CD;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 300px;
+}
+
+.company-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #5722CD;
+    margin: 80px;
+    flex-basis: 150px;
+}
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
